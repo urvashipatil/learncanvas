@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Capture Key codes by Key Names </title>
+    <link rel="stylesheet" href="/include/css/main.css">
+  </head>
+  <body>
+    <header>
+      Example from <a href="http://amzn.com/1430236655?tag=html5anim-20"><em>Foundation HTML5 Animation with JavaScript</em></a>
+    </header>    
+    <aside>Open debugging console in web browser and press any key.</aside>
+    <script src="/include/js/keycode.js"></script>
+    <script>
+    window.onload = function () {
+     
+      function onKeyBoardEvent (event) {
+        switch(event.keyCode)
+        {
+                case keycode.UP:
+                    console.log("Up!");
+                    break;
+                case keycode.DOWN:
+                    console.log("Down!");
+                    break;
+                case keycode.LEFT:
+                    console.log("Left!");
+                    break;
+                case keycode.RIGHT:
+                    console.log("Right!");
+                    break;
+                default:
+                 console.log(event.keyCode);
+                    break;
+        }
+      }
+
+      window.addEventListener('keydown', onKeyBoardEvent, false);     
+     
+    };
+    </script>
+  </body>
+</html>
